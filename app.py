@@ -4,7 +4,7 @@ def main():
     st.title('Simple Login App')
 
     # Menampilkan halaman login menggunakan HTML
-    with open('templates/login.html', 'r') as file:
+    with open('login.html', 'r') as file:
         login_page = file.read()
     st.markdown(login_page, unsafe_allow_html=True)
 
