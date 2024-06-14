@@ -1,7 +1,7 @@
 import streamlit as st
 
 def main():
-    st.title('Simple Login App')
+    st.title('kesehatan Mental App')
 
     # Menampilkan halaman login menggunakan HTML
     with open('login.html', 'r') as file:
@@ -16,9 +16,20 @@ def main():
     if st.button('Login'):
         if username == 'admin' and password == 'password':
             st.success('Login berhasil!')
-            # Lanjutkan ke halaman lain atau tampilkan konten setelah login
+            # Navigasi ke halaman diagnosa setelah login berhasil
+            show_diagnosa_page()
         else:
             st.error('Username atau password salah')
+
+def show_diagnosa_page():
+    st.title('Halaman Diagnosa')
+
+    # Menampilkan halaman diagnosa menggunakan HTML
+    with open('templates/diagnosa.html', 'r') as file:
+        diagnosa_page = file.read()
+    st.markdown(diagnosa_page, unsafe_allow_html=True)
+
+    # Tambahkan logika dan interaksi tambahan di halaman diagnosa di sini
 
 if __name__ == '__main__':
     main()
