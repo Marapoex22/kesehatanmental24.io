@@ -18,7 +18,7 @@ def main():
             st.success('Login berhasil!')
 
             # Setelah login berhasil, arahkan ke halaman diagnosa_form.html
-            with open('diagnosa_form.html', 'r') as file:
+            with open('diagnosis_form.html', 'r') as file:
                 diagnosa_page = file.read()
             st.markdown(diagnosa_page, unsafe_allow_html=True)
 
